@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ef0ff927cf56cd7269750517525cd2ff4d11dc6f9e3856b669b4b983d5389d5b
+-- hash: ed928259d80f937ef81f111e3dd6d47e1a6602b9d8cea5b460a5080a2ec65c8a
 
 name:           flower-planet
 version:        0.1.0.0
@@ -34,6 +34,9 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , diagrams
+    , diagrams-lib
+    , diagrams-svg
   default-language: Haskell2010
 
 executable flower-planet-exe
@@ -45,6 +48,9 @@ executable flower-planet-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , diagrams
+    , diagrams-lib
+    , diagrams-svg
     , flower-planet
   default-language: Haskell2010
 
@@ -58,5 +64,8 @@ test-suite flower-planet-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , diagrams
+    , diagrams-lib
+    , diagrams-svg
     , flower-planet
   default-language: Haskell2010

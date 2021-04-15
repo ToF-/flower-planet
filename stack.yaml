@@ -17,9 +17,9 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver:
-  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/9.yaml
-
+# resolver:
+#  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/31.yaml
+resolver: lts-17.2
 # User packages to be built.
 # Various formats can be used as shown in the example below.
 #
@@ -30,12 +30,24 @@ resolver:
 #   - auto-update
 #   - wai
 packages:
-- .
+
 # Dependency packages to be pulled from upstream that are not in the resolver.
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash. For example:
 #
-# extra-deps:
+extra-deps:
+  - hfsevents-0.1.2
+  - diagrams-1.4
+  - diagrams-contrib-1.4.4
+  - diagrams-core-1.4.2
+  - diagrams-lib-1.4.3
+  - diagrams-svg-1.4.3
+  - active-0.2.0.14
+  - dual-tree-0.2.2.1
+  - force-layout-0.4.0.6
+  - monoid-extras-0.5.1
+  - svg-builder-0.1.1
+
 # - acme-missiles-0.3
 # - git: https://github.com/commercialhaskell/stack.git
 #   commit: e7b331f14bcffb8367cd58fbfc8b40ec7642100a
